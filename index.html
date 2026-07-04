@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <title>ZEKRA — تخطيط المناسبات</title>
+  <meta name="description" content="ZEKRA — منصة تخطيط المناسبات: أفراح، خطوبة، أعياد ميلاد وحفلات. موردين موثوقين، ميزانية ذكية، ومساعد تخطيط.">
+  <meta name="theme-color" content="#0d0916">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ZEKRA">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // apply saved theme + language before paint to avoid flash
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem("zekra_state") || "{}");
+        var lang = s.lang || "ar";
+        var theme = s.theme || "dark";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="app">
+    <main id="view"></main>
+    <nav id="bottom-nav" class="bottom-nav"></nav>
+    <div id="toast" class="toast"></div>
+    <div id="sheet-root"></div>
+    <div id="onboard-root"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

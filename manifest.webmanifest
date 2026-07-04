@@ -1,0 +1,22 @@
+{
+  "name": "ZEKRA — Event Planning",
+  "short_name": "ZEKRA",
+  "description": "Plan weddings, engagements, birthdays and more — all in one place. Trusted vendors, smart budget, AI planning bot.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f0a16",
+  "theme_color": "#0f0a16",
+  "categories": ["lifestyle", "events", "shopping"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
